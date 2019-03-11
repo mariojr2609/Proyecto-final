@@ -8,14 +8,15 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="600dp"
+        android:layout_width="1000dp"
         android:layout_height="250dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_appkids"
-        tools:ignore="VectorDrawableCompat" />
+        tools:ignore="VectorDrawableCompat"
+        tools:srcCompat="@drawable/ic_app" />
 
     <EditText
         android:id="@+id/loginEmail"
@@ -101,7 +102,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#F09819"
+        android:background="@android:color/holo_orange_light"
         android:text="SIGNUP"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
