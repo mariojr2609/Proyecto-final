@@ -10,6 +10,9 @@ import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutes } from './dashboard.routing';
 
 import { LoginService } from '../services/login.service';
+import { GuarderiasService } from '../services/guarderia.service';
+import { CangurosService } from '../services/canguro.service';
+import { UserService } from '../services/user.service';
 
 import { ListarGuarderiasComponent } from './listar-guarderias/listar-guarderias.component';
 import { ListarCangurosComponent } from './listar-canguros/listar-canguros.component';
@@ -47,11 +50,14 @@ import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.compo
   entryComponents:[
   ],
 
-  providers: [
+  providers:[
     LoginService,
+    GuarderiasService,
+    CangurosService,
+    UserService,
     {
       provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}
-    }
+    },
   ],
 })
 
