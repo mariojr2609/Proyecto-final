@@ -16,7 +16,7 @@ public class LoginSignupResponse {
 
     public LoginSignupResponse(String token, UserResponse user) {
         this.token = token;
-        this.User = user;
+        this.user = user;
     }
 
     public String getToken() {

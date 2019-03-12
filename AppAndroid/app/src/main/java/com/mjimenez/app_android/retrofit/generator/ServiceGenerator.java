@@ -74,11 +74,10 @@ public class ServiceGenerator {
                     public Response intercept(Chain chain) throws IOException {
                         Request original = chain.request();
                         String token = null;
-                        if (tipo == Authentication.JWT && !authtoken.startsWith("Bearer"))
-                            token = "Bearer " + authtoken;
+                        if (tipo == Authentication.JWT && !authtoken.startsWith("Bearer")) token = "Bearer " + authtoken;
                         else
                             token = authtoken;
-                        Request request = original.newBuilder()
+                            Request request = original.newBuilder()
                                 .header("Authorization", token)
                                 .build();
                         return chain.proceed(request);

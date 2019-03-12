@@ -7,11 +7,12 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.bumptech.glide.util.Util;
+
 import com.mjimenez.app_android.R;
 import com.mjimenez.app_android.responses.LoginSignupResponse;
 import com.mjimenez.app_android.retrofit.generator.ServiceGenerator;
@@ -20,9 +21,9 @@ import okhttp3.Credentials;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import static android.support.v4.content.ContextCompat.startActivity;
+import com.mjimenez.app_android.util.Util;
 
-public class LoginActivity {
+public class LoginActivity extends AppCompatActivity {
     private EditText email, password;
     private Button btnLogin, btnRegistro;
 

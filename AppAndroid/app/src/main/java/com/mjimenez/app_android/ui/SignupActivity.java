@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.mjimenez.app_android.R;
+import com.mjimenez.app_android.models.Register;
 import com.mjimenez.app_android.responses.LoginSignupResponse;
 import com.mjimenez.app_android.retrofit.generator.ServiceGenerator;
 import com.mjimenez.app_android.retrofit.services.LoginSignupService;
@@ -74,14 +75,14 @@ public class SignupActivity extends AppCompatActivity {
                 } else if(!password.equals(compassword)){
                     onRegisterFail(R.string.register_contraseña_incorrecta);
                 } else {
-                    register datosRegistro = new register(name, email, password);
+                    Register datosRegistro = new Register(name, email, password);
                     createUser(datosRegistro, progressDialog);
                 }
             }
         });
     }
 
-    public void createUser(register registro, final ProgressDialog progressDialog){
+    public void createUser(Register registro, final ProgressDialog progressDialog){
         LoginSignupService service = ServiceGenerator.createService(LoginSignupService.class);
         Call<LoginSignupResponse> registerResponseCall = service.register(registro);
         registerResponseCall.enqueue(new Callback<LoginSignupResponse>() {
