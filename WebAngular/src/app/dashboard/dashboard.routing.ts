@@ -1,16 +1,26 @@
 import { Routes } from '@angular/router';
 import { AdminLayoutComponent } from '../core';
-import { ListarComponent } from '../dashboard/listar/listar.component';
+import { ListarGuarderiasComponent } from './listar-guarderias/listar-guarderias.component';
+import { ListarCangurosComponent } from './listar-canguros/listar-canguros.component';
+import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.component';
 
 export const DashboardRoutes: Routes = [
   {
-    path: 'dashboard',
+    path: 'home',
     component: AdminLayoutComponent,
     children: 
     [
       {
-        path: 'listar',
-        component: ListarComponent
+        path: 'listar guarderias',
+        component: ListarGuarderiasComponent
+      },
+      {
+        path: 'listar canguros',
+        component: ListarCangurosComponent
+      },
+      {
+        path: 'listar usuarios',
+        component: ListarUsuariosComponent
       },
     ]
   }

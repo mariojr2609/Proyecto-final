@@ -28,16 +28,16 @@ const MENUITEMS = [
     icon: 'home'
   },
   {
-    state: 'listar-recursos',
-    name: 'Recursos',
+    state: 'listar-guarderias',
+    name: 'Guarderias',
     type: 'link',
-    icon: 'library_books'
+    icon: 'location_city'
   },
   {
-    state: 'listar-categorias',
-    name: 'Categorías',
+    state: 'listar-canguros',
+    name: 'Canguros',
     type: 'link',
-    icon: 'local_library'
+    icon: 'child_care'
   },
   {
     state: 'listar-usuarios',

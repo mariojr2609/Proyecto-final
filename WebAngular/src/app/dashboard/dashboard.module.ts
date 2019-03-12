@@ -11,13 +11,17 @@ import { DashboardRoutes } from './dashboard.routing';
 
 import { LoginService } from '../services/login.service';
 
-import { ListarComponent } from '../dashboard/listar/listar.component';
+import { ListarGuarderiasComponent } from './listar-guarderias/listar-guarderias.component';
+import { ListarCangurosComponent } from './listar-canguros/listar-canguros.component';
+import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.component';
 
 @NgModule({
   
   declarations: [ 
     DashboardComponent,
-    ListarComponent
+    ListarGuarderiasComponent,
+    ListarCangurosComponent,
+    ListarUsuariosComponent
   ],
 
   imports: [

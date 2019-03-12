@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { MatIconModule, MatCardModule, MatInputModule, MatCheckboxModule, MatButtonModule } from '@angular/material';
+import { MatIconModule, MatCardModule, MatInputModule, MatCheckboxModule, MatButtonModule, MatTabsModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -13,6 +13,7 @@ import { LockscreenComponent } from './lockscreen/lockscreen.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginService } from '../services/login.service';
+import { SigninsignupComponent } from './signinsignup/signinsignup.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LoginService } from '../services/login.service';
     ForgotComponent,
     LockscreenComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    SigninsignupComponent
   ],
 
   imports: [
@@ -34,7 +36,8 @@ import { LoginService } from '../services/login.service';
     MatButtonModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTabsModule
   ],
   providers: [
     LoginService

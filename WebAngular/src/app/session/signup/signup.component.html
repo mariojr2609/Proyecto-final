@@ -3,13 +3,21 @@
     <div class="session-wrapper">
       <mat-card>
         <mat-card-content>
-
+          <!--<form [formGroup]="form" (ngSubmit)="onSubmit()">-->
           <div class="text-xs-center pb-1">
-            <img src="../../../assets/images/appkids.png">
+            <img src="../../../assets/images/logo1.png">
             <p class="mat-text-muted">Registra a un nuevo usuario para que pueda entrar</p>
           </div>
 
           <div fxLayout="column" fxLayoutAlign="space-around">
+
+            <div class="pb-1">
+              <mat-form-field style="width: 100%">
+                <input matInput placeholder="Name" type="text" [(ngModel)]="name">
+              </mat-form-field>
+              <!--<small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="mat-text-warn">You must include an email address.</small>
+              <small *ngIf="form.controls['email'].errors?.email && form.controls['email'].touched" class="mat-text-warn">You must include a valid email address.</small>-->
+            </div>
 
             <div class="pb-1">
               <mat-form-field style="width: 100%">
@@ -21,26 +29,10 @@
 
             <div class="pb-1">
               <mat-form-field style="width: 100%">
-                <input matInput placeholder="Nombre" type="text" [(ngModel)]="name">
-              </mat-form-field>
-              <!--<small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="mat-text-warn">You must include an email address.</small>
-              <small *ngIf="form.controls['email'].errors?.email && form.controls['email'].touched" class="mat-text-warn">You must include a valid email address.</small>-->
-            </div>
-
-            <div class="pb-1">
-              <mat-form-field style="width: 100%">
                 <input matInput placeholder="Role" type="text" [(ngModel)]="role">
               </mat-form-field>
               <!--<small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="mat-text-warn">You must include an email address.</small>
               <small *ngIf="form.controls['email'].errors?.email && form.controls['email'].touched" class="mat-text-warn">You must include a valid email address.</small>-->
-            </div>
-
-            <div class="pb-1">
-              <mat-form-field style="width: 100%">
-                <input matInput placeholder="Teléfono" type="number" [(ngModel)]="phone">
-              </mat-form-field>
-              <!--<small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="mat-text-warn">You must include an email address.</small>
-                      <small *ngIf="form.controls['email'].errors?.email && form.controls['email'].touched" class="mat-text-warn">You must include a valid email address.</small>-->
             </div>
 
             <div class="pb-1">
@@ -57,9 +49,8 @@
               <!--<small *ngIf="form.controls['confirmPassword'].hasError('required') && form.controls['confirmPassword'].touched" class="mat-text-warn">You must include confirm password.</small>
               <small *ngIf="form.controls['confirmPassword'].errors?.equalTo" class="mat-text-warn">Passwords do not math.</small>-->
             </div>
-
-            <button mat-raised-button color="primary" (click)="onSubmit()">Crear una cuenta</button>
-
+            <button mat-raised-button color="primary" (click)="onSubmit()">Sign up</button>
+          <!--</form>-->
           </div>
         </mat-card-content>
       </mat-card>
