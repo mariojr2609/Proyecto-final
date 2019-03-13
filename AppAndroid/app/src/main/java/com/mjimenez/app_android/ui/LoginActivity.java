@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.mjimenez.app_android.R;
 import com.mjimenez.app_android.responses.LoginSignupResponse;
 import com.mjimenez.app_android.retrofit.generator.ServiceGenerator;

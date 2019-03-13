@@ -2,17 +2,16 @@
   <button (click)="toggleSidenav.emit()" mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
-  <h1>BIBLIOTECA  COF</h1>
+  <h1>AppKids</h1>
+  
+  <!--<img src="../../../assets/images/logo2.png">-->
   <!--<div class="search-bar" fxFlex="160%">
     <form class="search-form" [ngStyle.xs]="{display: 'none'}">
       <mat-icon>search</mat-icon>
       <input type="text" placeholder="Search" autofocus="true" />
     </form>
   </div>-->
-  <button (click)="toggleNotificationSidenav.emit()" mat-icon-button class="ml-xs overflow-visible" >
-    <mat-icon>notifications</mat-icon>
-    <span class="notification-label">5</span>
-  </button>
+  
   <button mat-icon-button class="ml-xs overflow-visible" id="botones">
     <mat-icon [routerLink]="['/session/signin']" routerLinkActive="router-link-active" >exit_to_app</mat-icon>
   </button>

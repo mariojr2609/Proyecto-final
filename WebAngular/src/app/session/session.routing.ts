@@ -37,7 +37,7 @@ export const SessionRoutes: Routes = [
         component: SignupComponent
       },
       {
-        path: 'home',
+        path: 'signinsignup',
         component: SigninsignupComponent
       }, 
     ]

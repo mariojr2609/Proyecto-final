@@ -36,7 +36,7 @@ export class AdminLayoutComponent implements OnInit, OnDestroy {
     private router: Router,
     zone: NgZone) {
     this.mediaMatcher.addListener(mql => zone.run(() => {
-      this.mediaMatcher = mql;
+      //this.mediaMatcher = mql;
     }));
   }
 

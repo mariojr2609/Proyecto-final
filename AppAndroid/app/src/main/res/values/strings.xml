@@ -1,10 +1,20 @@
 <resources>
-    <string name="app_name">App-Android</string>
-    <string name="ok">ok</string>
-    <string name="login_error">error</string>
-    <string name="error">error</string>
-    <string name="title_activity_dashboard">DashboardActivity</string>
-    <string name="register_contraseña_no_segura">contraseña no segura</string>
-    <string name="register_contraseña_incorrecta">las contraseñas no coinciden</string>
-    <string name="Error">error</string>
+    <string name="app_name">AppKids</string>
+    <string name="ok">OK</string>
+    <string name="login_error">Error</string>
+    <string name="error">Error</string>
+    <string name="title_activity_dashboard">Home</string>
+    <string name="register_contraseña_no_segura">Contraseña no segura</string>
+    <string name="register_contraseña_incorrecta">Las contraseñas no coinciden</string>
+    <string name="Error">Error</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Home</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>
