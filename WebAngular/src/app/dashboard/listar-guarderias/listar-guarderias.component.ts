@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatSnackBar } from '@angular/material';
 import { LoginService } from 'src/app/services/login.service';
+import { Guarderias } from 'src/app/responses/guarderias.response';
+import { Users } from 'src/app/responses/user.response';
+import { GuarderiasService } from 'src/app/services/guarderia.service';
+import { AddGuarderiaComponent } from 'src/app/dialogs/add-guarderia/add-guarderia.component';
+import { EditGuarderiaComponent } from 'src/app/dialogs/edit-guarderia/edit-guarderia.component';
+import { DeleteGuarderiaComponent } from 'src/app/dialogs/delete-guarderia/delete-guarderia.component';
 
 @Component({
   selector: 'app-listar-guarderias',
@@ -9,9 +15,9 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class ListarGuarderiasComponent implements OnInit {
 
-  displayedColumns: string[] = ['Id', 'Name', 'Photo', 'Address', 'Zipcode', 'City', 'Province','Description', 'Location', 'Opciones'];
+  displayedColumns: string[] = ['Id', 'Name', 'Photo', 'Phone', 'Address', 'City', 'Description', 'Location', 'Opciones'];
   dataSource: Guarderias[];
-  usuarios: Usuarios[];
+  users: Users[];
 
   constructor (
     private guarderiasService: GuarderiasService, 
@@ -40,21 +46,21 @@ export class ListarGuarderiasComponent implements OnInit {
   }
 
   openDialogoAnadirGuarderia() {
-    const anadirGuarderiascomponent = this.dialog.open(AnadirGuarderiaComponent);
+    const addGuarderiascomponent = this.dialog.open(AddGuarderiaComponent);
   }
 
-  openDialogoEditarGuarderia(guarderia: Guarderia) {
-    const editarguarderiascomponent = this.dialog.open(EditarGuarderiaComponent, {
+  openDialogoEditarGuarderia(guarderias: Guarderias) {
+    const editguarderiascomponent = this.dialog.open(EditGuarderiaComponent, {
       data:{
-        element: Guarderias
+        element: guarderias
       }
     });
-    editarguarderiascomponent.afterClosed().subscribe(result => {
+    editguarderiascomponent.afterClosed().subscribe(result => {
       this.getGuarderias();
     });
   }
 
   openDialogoEliminarGuarderia() {
-    const eliminarguarderiascomponent = this.dialog.open(EliminarGuarderiaComponent);
+    const eliminarguarderiascomponent = this.dialog.open(DeleteGuarderiaComponent);
   }
 }

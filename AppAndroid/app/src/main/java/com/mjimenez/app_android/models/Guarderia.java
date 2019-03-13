@@ -4,10 +4,9 @@ public class Guarderia {
     private String id;
     private String name;
     private String photo;
+    private String phone;
     private String address;
-    private String zipcode;
     private String city;
-    private String province;
     private String description;
     private String loc;
 
@@ -15,14 +14,13 @@ public class Guarderia {
 
     }
 
-    public Guarderia(String id, String name, String photo, String address, String zipcode, String city, String province, String description, String loc) {
+    public Guarderia(String id, String name, String photo, String phone, String address, String city, String description, String loc) {
         this.id = id;
         this.name = name;
         this.photo = photo;
+        this.phone = phone;
         this.address = address;
-        this.zipcode = zipcode;
         this.city = city;
-        this.province = province;
         this.description = description;
         this.loc = loc;
     }
@@ -51,6 +49,14 @@ public class Guarderia {
         this.photo = photo;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public String getAddress() {
         return address;
     }
@@ -59,28 +65,12 @@ public class Guarderia {
         this.address = address;
     }
 
-    public String getZipcode() {
-        return zipcode;
-    }
-
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
-    }
-
     public String getCity() {
         return city;
     }
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-    public String getProvince() {
-        return province;
-    }
-
-    public void setProvince(String province) {
-        this.province = province;
     }
 
     public String getDescription() {

@@ -2,6 +2,12 @@ import { Router } from 'express'
 import user from './user'
 import auth from './auth'
 import passwordReset from './password-reset'
+import guarderia from './guarderia'
+import canguro from './canguro'
+import valuation from './valuation'
+import child from './child'
+import photoGuarderia from './photo_guarderia'
+import photoCanguro from './photo_canguro'
 
 const router = new Router()
 
@@ -31,5 +37,11 @@ const router = new Router()
 router.use('/users', user)
 router.use('/auth', auth)
 router.use('/password-resets', passwordReset)
+router.use('/guarderias', guarderia)
+router.use('/canguros', canguro)
+router.use('/valuations', valuation)
+router.use('/children', child)
+router.use('/photo_guarderias', photoGuarderia)
+router.use('/photo_canguros', photoCanguro)
 
 export default router

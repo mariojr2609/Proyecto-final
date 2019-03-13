@@ -8,23 +8,43 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutes } from './dashboard.routing';
-
 import { LoginService } from '../services/login.service';
-import { GuarderiasService } from '../services/guarderia.service';
-import { CangurosService } from '../services/canguro.service';
-import { UserService } from '../services/user.service';
 
+import { GuarderiasService } from '../services/guarderia.service';
 import { ListarGuarderiasComponent } from './listar-guarderias/listar-guarderias.component';
+import { AddGuarderiaComponent } from '../dialogs/add-guarderia/add-guarderia.component';
+import { EditGuarderiaComponent } from '../dialogs/edit-guarderia/edit-guarderia.component';
+import { DeleteGuarderiaComponent } from '../dialogs/delete-guarderia/delete-guarderia.component';
+
+import { CangurosService } from '../services/canguro.service';
 import { ListarCangurosComponent } from './listar-canguros/listar-canguros.component';
+import { AddCanguroComponent } from '../dialogs/add-canguro/add-canguro.component';
+import { EditCanguroComponent } from '../dialogs/edit-canguro/edit-canguro.component';
+import { DeleteCanguroComponent } from '../dialogs/delete-canguro/delete-canguro.component';
+
+import { UserService } from '../services/user.service';
 import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.component';
+import { EditUserComponent } from '../dialogs/edit-user/edit-user.component';
+import { DeleteUserComponent } from '../dialogs/delete-user/delete-user.component';
 
 @NgModule({
   
   declarations: [ 
     DashboardComponent,
+
     ListarGuarderiasComponent,
+    AddGuarderiaComponent,
+    EditGuarderiaComponent,
+    DeleteGuarderiaComponent,
+
     ListarCangurosComponent,
-    ListarUsuariosComponent
+    AddCanguroComponent,
+    EditCanguroComponent,
+    DeleteCanguroComponent,
+
+    ListarUsuariosComponent,
+    EditUserComponent,
+    DeleteUserComponent
   ],
 
   imports: [
@@ -48,6 +68,14 @@ import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.compo
   ],
 
   entryComponents:[
+    AddGuarderiaComponent,
+    EditGuarderiaComponent,
+    DeleteGuarderiaComponent,
+    AddCanguroComponent,
+    EditCanguroComponent,
+    DeleteCanguroComponent,
+    EditUserComponent,
+    DeleteUserComponent
   ],
 
   providers:[

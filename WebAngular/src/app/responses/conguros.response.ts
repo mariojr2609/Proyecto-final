@@ -5,7 +5,6 @@ export interface Canguros{
     age: string;
     address: string;
     city: string;
-    description: string;
     studies: string;
     location: string;
 }

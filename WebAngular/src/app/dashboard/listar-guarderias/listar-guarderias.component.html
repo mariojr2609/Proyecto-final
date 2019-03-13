@@ -1,4 +1,4 @@
-<button mat-raised-button color="primary" (click)="openDialogoAnadirRecurso()">
+<button mat-raised-button color="primary" (click)="openDialogoAnadirGuarderia()">
   <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
 </button>
 
@@ -21,28 +21,22 @@
     <td mat-cell *matCellDef="let element"> {{element.photo}} </td>
   </ng-container>
 
+  <!-- Phone Column -->
+  <ng-container matColumnDef="Phone">
+    <th mat-header-cell *matHeaderCellDef> Phone </th>
+    <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+  </ng-container>
+
   <!-- Address Column -->
   <ng-container matColumnDef="Address">
     <th mat-header-cell *matHeaderCellDef> Address </th>
     <td mat-cell *matCellDef="let element"> {{element.address}} </td>
   </ng-container>
 
-  <!-- Zipcode Column -->
-  <ng-container matColumnDef="Zipcode">
-      <th mat-header-cell *matHeaderCellDef> Zipcode </th>
-      <td mat-cell *matCellDef="let element"> {{element.zipcode}} </td>
-    </ng-container>
-
   <!-- City Column -->
   <ng-container matColumnDef="City">
     <th mat-header-cell *matHeaderCellDef> City </th>
     <td mat-cell *matCellDef="let element"> {{element.city}} </td>
-  </ng-container>
-
-  <!-- Province Column -->
-  <ng-container matColumnDef="Province">
-    <th mat-header-cell *matHeaderCellDef> Province </th>
-    <td mat-cell *matCellDef="let element"> {{element.province}} </td>
   </ng-container>
 
   <!-- Description Column -->

@@ -56,14 +56,6 @@ import {
   AccordionLinkDirective,
   AccordionDirective,
 } from './core';
-import { AddGuarderiaComponent } from './dialogs/add-guarderia/add-guarderia.component';
-import { AddCanguroComponent } from './dialogs/add-canguro/add-canguro.component';
-import { EditGuarderiaComponent } from './dialogs/edit-guarderia/edit-guarderia.component';
-import { EditCanguroComponent } from './dialogs/edit-canguro/edit-canguro.component';
-import { EditUserComponent } from './dialogs/edit-user/edit-user.component';
-import { DeleteUserComponent } from './dialogs/delete-user/delete-user.component';
-import { DeleteCanguroComponent } from './dialogs/delete-canguro/delete-canguro.component';
-import { DeleteGuarderiaComponent } from './dialogs/delete-guarderia/delete-guarderia.component';
 
 @NgModule({
   declarations: [
@@ -78,14 +70,6 @@ import { DeleteGuarderiaComponent } from './dialogs/delete-guarderia/delete-guar
     AccordionAnchorDirective,
     AccordionLinkDirective,
     AccordionDirective,
-    AddGuarderiaComponent,
-    AddCanguroComponent,
-    EditGuarderiaComponent,
-    EditCanguroComponent,
-    EditUserComponent,
-    DeleteUserComponent,
-    DeleteCanguroComponent,
-    DeleteGuarderiaComponent,
   ],
   
   imports: [

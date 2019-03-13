@@ -10,6 +10,12 @@ public class Child {
 
     }
 
+    public Child(String name, String fecha_nacimiento, String user_id) {
+        this.name = name;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.user_id = user_id;
+    }
+
     public Child(String id, String name, String fecha_nacimiento, String user_id) {
         this.id = id;
         this.name = name;

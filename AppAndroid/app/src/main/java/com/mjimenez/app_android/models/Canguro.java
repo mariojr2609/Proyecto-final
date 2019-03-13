@@ -4,12 +4,10 @@ public class Canguro {
     private String id;
     private String name;
     private String photo;
+    private String phone;
     private String age;
     private String address;
-    private String zipcode;
     private String city;
-    private String province;
-    private String description;
     private String studies;
     private String loc;
 
@@ -17,16 +15,14 @@ public class Canguro {
 
     }
 
-    public Canguro(String id, String name, String photo, String age, String address, String zipcode, String city, String province, String description, String studies, String loc) {
+    public Canguro(String id, String name, String photo, String phone, String age, String address, String city, String studies, String loc) {
         this.id = id;
         this.name = name;
         this.photo = photo;
+        this.phone = phone;
         this.age = age;
         this.address = address;
-        this.zipcode = zipcode;
         this.city = city;
-        this.province = province;
-        this.description = description;
         this.studies = studies;
         this.loc = loc;
     }
@@ -55,6 +51,14 @@ public class Canguro {
         this.photo = photo;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public String getAge() {
         return age;
     }
@@ -71,36 +75,12 @@ public class Canguro {
         this.address = address;
     }
 
-    public String getZipcode() {
-        return zipcode;
-    }
-
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
-    }
-
     public String getCity() {
         return city;
     }
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-    public String getProvince() {
-        return province;
-    }
-
-    public void setProvince(String province) {
-        this.province = province;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getStudies() {

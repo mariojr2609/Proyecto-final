@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatSnackBar } from '@angular/material';
 import { LoginService } from 'src/app/services/login.service';
+import { Users } from 'src/app/responses/user.response';
+import { Canguros } from 'src/app/responses/conguros.response';
+import { CangurosService } from 'src/app/services/canguro.service';
+import { EditCanguroComponent } from 'src/app/dialogs/edit-canguro/edit-canguro.component';
+import { AddCanguroComponent } from 'src/app/dialogs/add-canguro/add-canguro.component';
+import { DeleteCanguroComponent } from 'src/app/dialogs/delete-canguro/delete-canguro.component';
 
 @Component({
   selector: 'app-listar-canguros',
@@ -9,9 +15,9 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class ListarCangurosComponent implements OnInit {
 
-  displayedColumns: string[] = ['Id', 'Name', 'Photo', 'Age', 'Address', 'Zipcode', 'City', 'Province','Description', 'Studies', 'Location', 'Opciones'];
+  displayedColumns: string[] = ['Id', 'Name', 'Photo', 'Phone', 'Age', 'Address', 'City', 'Studies', 'Location', 'Opciones'];
   dataSource: Canguros[];
-  usuarios: Usuarios[];
+  usuarios: Users[];
 
   constructor (
     private cangurosService: CangurosService, 
@@ -40,13 +46,13 @@ export class ListarCangurosComponent implements OnInit {
   }
 
   openDialogoAnadirCanguro() {
-    const anadircangurocomponent = this.dialog.open(AnadirCanguroComponent);
+    const anadircangurocomponent = this.dialog.open(AddCanguroComponent);
   }
 
   openDialogoEditarCanguro(canguros: Canguros) {
-    const editarcanguroscomponent = this.dialog.open(EditarCanguroComponent, {
+    const editarcanguroscomponent = this.dialog.open(EditCanguroComponent, {
       data:{
-        element: Canguros
+        element: canguros
       }
     });
     editarcanguroscomponent.afterClosed().subscribe(result => {
@@ -55,6 +61,6 @@ export class ListarCangurosComponent implements OnInit {
   }
 
   openDialogoEliminarCanguro() {
-    const eliminarcanguroscomponent = this.dialog.open(EliminarCangurosComponent);
+    const eliminarcanguroscomponent = this.dialog.open(DeleteCanguroComponent);
   }
 }

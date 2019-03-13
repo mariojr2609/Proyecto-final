@@ -11,15 +11,15 @@ export const DashboardRoutes: Routes = [
     children: 
     [
       {
-        path: 'listar guarderias',
+        path: 'listar-guarderias',
         component: ListarGuarderiasComponent
       },
       {
-        path: 'listar canguros',
+        path: 'listar-canguros',
         component: ListarCangurosComponent
       },
       {
-        path: 'listar usuarios',
+        path: 'listar-usuarios',
         component: ListarUsuariosComponent
       },
     ]
