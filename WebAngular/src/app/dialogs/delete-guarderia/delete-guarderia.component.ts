@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { Guarderias } from 'src/app/responses/guarderias.response';
+import { MAT_DIALOG_DATA, MatDialogRef, MatSnackBar, MatDialog } from '@angular/material';
+import { GuarderiasService } from 'src/app/services/guarderia.service';
+import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-delete-guarderia',
@@ -7,35 +12,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteGuarderiaComponent implements OnInit {
 
-  eliminar : string;
-  dataSource: Canguros[];
+  delete: string;
+  dataSource: Guarderias[];
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
-    public dialogRef: MatDialogRef<DeleteCanguroComponent>, 
-    private cangurosService: CangurosService, 
-    private fb: FormBuilder, 
-    public snackBar: MatSnackBar, 
-    private router : Router,
+    public dialogRef: MatDialogRef<DeleteGuarderiaComponent>,
+    private guarderiasService: GuarderiasService,
+    private fb: FormBuilder,
+    public snackBar: MatSnackBar,
+    private router: Router,
     public dialog: MatDialog
   ) { }
 
   ngOnInit() { }
-  
-  deleteCanguro() {
-    this.cangurosService.deleteCanguros(this.data.element.id).subscribe(
-      canguro => {
-      this.snackBar.open(`Eliminando ${this.data.element.name}`, 'Cerrar', {
-        duration: 3000,
-      });
-    })
+
+  deleteGuarderia() {
+    this.guarderiasService.deleteGuarderias(this.data.element.id).subscribe(
+      guarderia => {
+        this.snackBar.open(`Removing ${this.data.element.name}`, 'Close', {
+          duration: 3000,
+        });
+      })
   }
 
-  comprobeDelete(){
-    if(this.eliminar === "ELIMINAR")
+  comprobeDelete() {
+    if (this.delete === "DELETE")
       return true;
     else
-      return false;   
+      return false;
   }
-
 }

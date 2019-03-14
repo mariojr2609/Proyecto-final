@@ -10,32 +10,33 @@ import { GuarderiasService } from 'src/app/services/guarderia.service';
   styleUrls: ['./add-guarderia.component.scss']
 })
 export class AddGuarderiaComponent implements OnInit {
-  
-    public guarderiaForm: FormGroup;
-  
-    constructor(
-      private guarderiasService: GuarderiasService,
-      public dialogRef: MatDialogRef<AddGuarderiaComponent>,
-      private fb: FormBuilder) { }
-  
-    ngOnInit() {
-      this.guarderiaForm = this.fb.group ({
-        name: ['', Validators.compose([Validators.required])], 
-        photo: ['' , Validators.compose ([Validators.required ])], 
-        phone: ['', Validators.compose([Validators.required])],
-        address: ['', Validators.compose([Validators.required])],
-        city: ['', Validators.compose([Validators.required])],
-        drescription: ['', Validators.compose([Validators.required])],
-        location: ['', Validators.compose([Validators.required])],
-      });
-    }
-  
-    addGuarderias() {
-      const nuevoGuarderia = <Guarderias>this.guarderiaForm.value;
-      this.guarderiasService.addGuarderias(nuevoGuarderia).subscribe(
-        recurso => {
-          this.dialogRef.close();
-        }
-      );
-    }
+
+  public guarderiaForm: FormGroup;
+
+  constructor(
+    private guarderiasService: GuarderiasService,
+    public dialogRef: MatDialogRef<AddGuarderiaComponent>,
+    private fb: FormBuilder
+  ) { }
+
+  ngOnInit() {
+    this.guarderiaForm = this.fb.group({
+      name: ['', Validators.compose([Validators.required])],
+      photo: ['', Validators.compose([Validators.required])],
+      phone: ['', Validators.compose([Validators.required])],
+      address: ['', Validators.compose([Validators.required])],
+      city: ['', Validators.compose([Validators.required])],
+      drescription: ['', Validators.compose([Validators.required])],
+      location: ['', Validators.compose([Validators.required])],
+    });
+  }
+
+  addGuarderias() {
+    const nuevoGuarderia = <Guarderias>this.guarderiaForm.value;
+    this.guarderiasService.addGuarderias(nuevoGuarderia).subscribe(
+      guarderia => {
+        this.dialogRef.close();
+      }
+    );
+  }
 }

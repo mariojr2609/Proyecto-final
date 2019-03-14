@@ -37,7 +37,7 @@ export class EditGuarderiaComponent implements OnInit {
   editGuarderias() {
     const guarderias = <Guarderias>this.guarderiaForm.value
     this.guarderiasService.editGuarderias(this.data.element.id, guarderias).subscribe(
-      canguro => {
+      guarderia => {
         this.dialogRef.close();
       }
     );

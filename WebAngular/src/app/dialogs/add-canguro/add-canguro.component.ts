@@ -12,31 +12,32 @@ import { Canguros } from 'src/app/responses/conguros.response';
 export class AddCanguroComponent implements OnInit {
 
   public canguroForm: FormGroup;
-  
-    constructor(
-      private cangurosService: CangurosService,
-      public dialogRef: MatDialogRef<AddCanguroComponent>,
-      private fb: FormBuilder) { }
-  
-    ngOnInit() {
-      this.canguroForm = this.fb.group ({
-        name: ['', Validators.compose([Validators.required])], 
-        photo: ['' , Validators.compose ([Validators.required ])], 
-        phone: ['', Validators.compose([Validators.required])],
-        age: ['', Validators.compose([Validators.required])],
-        address: ['', Validators.compose([Validators.required])],
-        city: ['', Validators.compose([Validators.required])],
-        studies: ['', Validators.compose([Validators.required])],
-        location: ['', Validators.compose([Validators.required])],
-      });
-    }
-  
-    addGuarderias() {
-      const nuevoGuarderia = <Canguros>this.canguroForm.value;
-      this.cangurosService.addCanguros(nuevoGuarderia).subscribe(
-        recurso => {
-          this.dialogRef.close();
-        }
-      );
-    }
+
+  constructor(
+    private cangurosService: CangurosService,
+    public dialogRef: MatDialogRef<AddCanguroComponent>,
+    private fb: FormBuilder
+  ) { }
+
+  ngOnInit() {
+    this.canguroForm = this.fb.group({
+      name: ['', Validators.compose([Validators.required])],
+      photo: ['', Validators.compose([Validators.required])],
+      phone: ['', Validators.compose([Validators.required])],
+      age: ['', Validators.compose([Validators.required])],
+      address: ['', Validators.compose([Validators.required])],
+      city: ['', Validators.compose([Validators.required])],
+      studies: ['', Validators.compose([Validators.required])],
+      location: ['', Validators.compose([Validators.required])],
+    });
+  }
+
+  addCanguros() {
+    const nuevoCanguro = <Canguros>this.canguroForm.value;
+    this.cangurosService.addCanguros(nuevoCanguro).subscribe(
+      canguro => {
+        this.dialogRef.close();
+      }
+    );
+  }
 }

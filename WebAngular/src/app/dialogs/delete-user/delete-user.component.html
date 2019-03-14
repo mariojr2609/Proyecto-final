@@ -1,12 +1,12 @@
 <div fxLayout="column">
   <div>
-    <h2 mat-dialog-title>ELIMINAR USUARIO</h2>
+    <h2 mat-dialog-title>DELETE USER</h2>
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Escriba ELIMINAR" [(ngModel)]="eliminar">
+      <input matInput placeholder="Write DELETE" [(ngModel)]="delete">
     </mat-form-field>
     <mat-dialog-actions>
-      <button mat-button mat-dialog-close>CANCELAR</button>
-      <button mat-raised-button color="warn" [mat-dialog-close]="true" [disabled]="!comprobarEliminar()" (click)="deleteUsuario()">ELIMINAR</button>
+      <button mat-button mat-dialog-close>CANCEL</button>
+      <button mat-raised-button color="warn" [mat-dialog-close]="true" [disabled]="!comprobeDelete()" (click)="deleteUser()">DELETE</button>
     </mat-dialog-actions>
   </div>
 </div>

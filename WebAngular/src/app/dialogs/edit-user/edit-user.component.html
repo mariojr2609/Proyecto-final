@@ -1,33 +1,33 @@
 <div fxLayout="column">
   <div>
-    <h2 mat-dialog-title>EDITAR USUARIO</h2>
+    <h2 mat-dialog-title>EDIT USER</h2>
     <mat-dialog-content>
-      <form fxLayout="column" [formGroup]="usuarioForm">
+      <form fxLayout="column" [formGroup]="userForm">
         <mat-form-field>
-          <input matInput placeholder="Nombre" [formControl]="usuarioForm.controls['name']">
-        </mat-form-field>
-
-        <mat-form-field>
-          <input matInput placeholder="Email" [formControl]="usuarioForm.controls['email']">
+          <input matInput placeholder="Email" type="email" [formControl]="userForm.controls['email']">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Contraseña" type="password" [formControl]="usuarioForm.controls['password']">
+          <input matInput placeholder="Password" type="password" [formControl]="userForm.controls['password']">
         </mat-form-field>
 
         <mat-form-field>
-          <input matInput placeholder=Teléfono type="number" [formControl]="usuarioForm.controls['phone']">
+          <input matInput placeholder="Name" [formControl]="userForm.controls['name']">
         </mat-form-field>
 
         <mat-form-field>
-          <input matInput placeholder=Notas [formControl]="usuarioForm.controls['notes']">
+          <input matInput placeholder=Role type="number" [formControl]="userForm.controls['role']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=Picture [formControl]="userForm.controls['picture']">
         </mat-form-field>
       </form>
     </mat-dialog-content>
 
     <mat-dialog-actions>
-      <button mat-button mat-dialog-close>CANCELAR</button>
-      <button mat-raised-button color="primary" [mat-dialog-close]="true" [disabled]="!usuarioForm.valid" (click)="editUsuario()">EDITAR</button>
+      <button mat-button mat-dialog-close>CANCEL</button>
+      <button mat-raised-button color="primary" [mat-dialog-close]="true" [disabled]="!userForm.valid"(click)="editUser()">EDIT</button>
     </mat-dialog-actions>
   </div>
 </div>

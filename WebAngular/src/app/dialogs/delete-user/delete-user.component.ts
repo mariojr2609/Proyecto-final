@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { Users } from 'src/app/responses/user.response';
+import { MatDialogRef, MAT_DIALOG_DATA, MatSnackBar, MatDialog } from '@angular/material';
+import { UserService } from 'src/app/services/user.service';
+import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-delete-user',
@@ -7,33 +12,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteUserComponent implements OnInit {
 
-  eliminar : string;
-  dataSource: Usuarios[];
+  delete: string;
+  dataSource: Users[];
 
-  constructor(public dialogRef: MatDialogRef<EliminarUsuarioComponent>, 
-    private usuarioService: UsuarioService, 
-    private fb: FormBuilder, 
-    public snackBar: MatSnackBar, 
-    private router : Router,
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    public dialogRef: MatDialogRef<DeleteUserComponent>,
+    private userService: UserService,
+    private fb: FormBuilder,
+    public snackBar: MatSnackBar,
+    private router: Router,
     public dialog: MatDialog,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
+  ) { }
 
-  ngOnInit() {
-        
-  }
-  deleteUsuario() {
-    this.usuarioService.deleteUsuarios(this.data.element.id).subscribe( usuario => {
-      this.snackBar.open(`Eliminando ${this.data.element.name}`, 'Cerrar', {
+  ngOnInit() { }
+
+  deleteUser() {
+    this.userService.deleteUsers(this.data.element.id).subscribe(user => {
+      this.snackBar.open(`Removing ${this.data.element.name}`, 'Close', {
         duration: 3000,
       });
     })
   }
 
-  comprobarEliminar(){
-    if(this.eliminar === "ELIMINAR")
+  comprobeDelete() {
+    if (this.delete === "DELETE")
       return true;
     else
-      return false;   
+      return false;
   }
 
 }

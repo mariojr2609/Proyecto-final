@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { Users } from 'src/app/responses/user.response';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-edit-user',
@@ -7,40 +11,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditUserComponent implements OnInit {
 
-  usuarios: Usuarios;
-  public usuarioForm: FormGroup;
+  usuarios: Users;
+  public userForm: FormGroup;
 
-  constructor(@Inject(MAT_DIALOG_DATA)
-  public data: any,
-    private usuarioService: UsuarioService,
+  constructor(
+    @Inject(MAT_DIALOG_DATA)public data: any,
+    private userService: UserService,
     private fb: FormBuilder,
-    public dialogRef: MatDialogRef<EditarUsuarioComponent>) { }
+    public dialogRef: MatDialogRef<EditUserComponent>) { }
 
   ngOnInit() {
 
-    this.usuarioForm = this.fb.group({
+    this.userForm = this.fb.group({
       id: [this.data.element.id, Validators.compose([Validators.required])],
-      name: [this.data.element.name, Validators.compose([Validators.required])],
       email: [this.data.element.email, Validators.compose([Validators.required])],
       password: [this.data.element.password, Validators.compose([Validators.required])],
-      phone: [this.data.element.phone, Validators.compose([Validators.required])],
-      notes: [this.data.element.notes, Validators.compose([Validators.required])]
-
+      name: [this.data.element.name, Validators.compose([Validators.required])],
+      role: [this.data.element.role, Validators.compose([Validators.required])],
+      picture: [this.data.element.picture, Validators.compose([Validators.required])]
     });
 
   }
-  saveUsuario() {
-    this.usuarioService.updateUsuario(this.usuarios).subscribe(usuario => {
+  saveUser() {
+    this.userService.updateUsers(this.usuarios).subscribe(user => {
       this.dialogRef.close();
     });
   }
 
-  editUsuario() {
-    this.usuarioService.editUsuario(this.data.element.id, this.usuarioForm.value).subscribe(response => {
+  editUser() {
+    this.userService.editUsers(this.data.element.id, this.userForm.value).subscribe(response => {
       this.dialogRef.close();
-    }, error => {
+    }, 
+    error => {
       console.log(error);
-    }
-    )
+    })
   }
 }
