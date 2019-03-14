@@ -1,3 +1,12 @@
-<p>
-  delete-canguro works!
-</p>
+<div fxLayout="column">
+  <div>
+    <h2 mat-dialog-title>DELETE CANGURO</h2>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Write ELIMINAR" [(ngModel)]="eliminar">
+    </mat-form-field>
+    <mat-dialog-actions>
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button mat-raised-button color="warn" [mat-dialog-close]="true" [disabled]="!comprobeDelete()" (click)="deleteCanguro()">DELETE</button>
+    </mat-dialog-actions>
+  </div>
+</div>

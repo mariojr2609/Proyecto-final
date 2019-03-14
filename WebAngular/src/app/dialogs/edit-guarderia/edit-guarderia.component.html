@@ -1,3 +1,41 @@
-<p>
-  edit-guarderia works!
-</p>
+<div fxLayout="column">
+  <div>
+    <h2 mat-dialog-title>EDIT GUARDERIA</h2>
+    <mat-dialog-content>
+      <form fxLayout="column" [formGroup]="guarderiaForm">
+        <mat-form-field>
+          <input matInput placeholder=Name [formControl]="guarderiaForm.controls['name']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=Photo [formControl]="guarderiaForm.controls['photo']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=Phone type="number" [formControl]="guarderiaForm.controls['phone']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=Address [formControl]="guarderiaForm.controls['address']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=City type="number" [formControl]="guarderiaForm.controls['city']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=Description [formControl]="guarderiaForm.controls['description']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=Location [formControl]="guarderiaForm.controls['loc']">
+        </mat-form-field>
+      </form>
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+      <button mat-button mat-dialog-close>CANCEL</button>
+      <button mat-raised-button color="primary" [mat-dialog-close]="true" [disabled]="!guarderiaForm.valid"(click)="editGuarderia()">EDIT</button>
+    </mat-dialog-actions>
+  </div>
+</div>

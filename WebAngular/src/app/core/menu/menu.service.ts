@@ -20,13 +20,8 @@ export interface Menu {
   children?: ChildrenItems[];
 }
 
-const MENUITEMS = [
-  {
-    state: 'HOME',
-    name: 'Home',
-    type: 'link',
-    icon: 'home'
-  },
+const MENUITEMS = 
+[
   {
     state: 'listar-guarderias',
     name: 'Guarderias',

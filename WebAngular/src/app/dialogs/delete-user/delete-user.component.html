@@ -1,3 +1,12 @@
-<p>
-  delete-user works!
-</p>
+<div fxLayout="column">
+  <div>
+    <h2 mat-dialog-title>ELIMINAR USUARIO</h2>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Escriba ELIMINAR" [(ngModel)]="eliminar">
+    </mat-form-field>
+    <mat-dialog-actions>
+      <button mat-button mat-dialog-close>CANCELAR</button>
+      <button mat-raised-button color="warn" [mat-dialog-close]="true" [disabled]="!comprobarEliminar()" (click)="deleteUsuario()">ELIMINAR</button>
+    </mat-dialog-actions>
+  </div>
+</div>

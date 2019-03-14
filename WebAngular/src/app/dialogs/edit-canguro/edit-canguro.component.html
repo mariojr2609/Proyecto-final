@@ -1,3 +1,45 @@
-<p>
-  edit-canguro works!
-</p>
+<div fxLayout="column">
+  <div>
+    <h2 mat-dialog-title>EDIT CANGURO</h2>
+    <mat-dialog-content>
+      <form fxLayout="column" [formGroup]="canguroForm">
+        <mat-form-field>
+          <input matInput placeholder=Name [formControl]="canguroForm.controls['name']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=Photo [formControl]="canguroForm.controls['photo']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=Phone type="number" [formControl]="canguroForm.controls['phone']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=Age type="number" [formControl]="canguroForm.controls['age']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=Address [formControl]="canguroForm.controls['address']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=City type="number" [formControl]="canguroForm.controls['city']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=Studies [formControl]="canguroForm.controls['studies']">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder=Location [formControl]="canguroForm.controls['loc']">
+        </mat-form-field>
+      </form>
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+      <button mat-button mat-dialog-close>CANCEL</button>
+      <button mat-raised-button color="primary" [mat-dialog-close]="true" [disabled]="!canguroForm.valid"(click)="editCanguro()">EDIT</button>
+    </mat-dialog-actions>
+  </div>
+</div>
