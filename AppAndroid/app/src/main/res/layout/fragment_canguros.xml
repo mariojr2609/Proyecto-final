@@ -17,14 +17,15 @@
 
         <ImageView
             android:id="@+id/canguro_list_photo"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.147"
             app:srcCompat="@drawable/ic_appkids" />
 
         <ImageView
@@ -42,25 +43,23 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
-            android:layout_marginBottom="10dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="@string/name"
             app:layout_constraintBottom_toTopOf="@+id/canguro_listar_address"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/canguro_list_photo"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
 
         <EditText
             android:id="@+id/canguro_listar_address"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
-            android:layout_marginBottom="10dp"
             android:ems="10"
             android:inputType="textPersonName|textEmailAddress"
             android:text="@string/address"
@@ -74,9 +73,8 @@
             android:id="@+id/canguro_listar_city"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="@string/city"

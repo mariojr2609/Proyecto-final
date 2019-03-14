@@ -4,20 +4,16 @@
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_perfil"
-            android:icon="@drawable/ic_perfil"
-            android:title="Import" />
+            android:id="@+id/nav_child"
+            android:icon="@drawable/ic_child"
+            android:title="child" />
         <item
             android:id="@+id/nav_guarderia"
             android:icon="@drawable/ic_guarderia"
-            android:title="Gallery" />
+            android:title="guarderia" />
         <item
             android:id="@+id/nav_canguro"
             android:icon="@drawable/ic_canguro"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_user"
-            android:icon="@drawable/ic_user"
-            android:title="Tools" />
+            android:title="canguro" />
     </group>
 </menu>

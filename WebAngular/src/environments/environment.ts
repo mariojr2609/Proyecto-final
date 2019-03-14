@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false, 
-  apiUrl: 'https://git.heroku.com/appkids.git'
+  apiUrl: 'https://api-proyecto-final.herokuapp.com/',
+  masterkey: 'Ubu5O0SQZJbSlgKEkyUHVIL4pQ7w4OTe'
 };
 
 /*

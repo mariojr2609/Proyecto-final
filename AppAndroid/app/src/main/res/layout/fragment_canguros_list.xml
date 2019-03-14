@@ -6,7 +6,7 @@
     android:name="com.mjimenez.app_android.CangurosFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorSecundary"
+    android:background="@color/colorPrimary"
     app:layoutManager="LinearLayoutManager"
     tools:context=".fragment.CangurosFragment"
     tools:listitem="@layout/fragment_canguros" />
