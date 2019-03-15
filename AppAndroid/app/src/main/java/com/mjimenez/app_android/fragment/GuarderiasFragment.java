@@ -9,9 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.mjimenez.app_android.adapter.GuarderiasAdapter;
 import com.mjimenez.app_android.R;
+import com.mjimenez.app_android.dummy.DummyContent;
+import com.mjimenez.app_android.dummy.DummyContent.DummyItem;
 
 public class GuarderiasFragment extends Fragment {
     private static final String ARG_COLUMN_COUNT = "column-count";
@@ -51,7 +52,7 @@ public class GuarderiasFragment extends Fragment {
             else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new GuarderiasAdapter(G.ITEMS, mListener));
+            recyclerView.setAdapter(new GuarderiasAdapter(DummyContent.ITEMS, mListener));
         }
         return view;
     }

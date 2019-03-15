@@ -7,14 +7,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mjimenez.app_android.R;
+import com.mjimenez.app_android.dummy.DummyContent;
 import com.mjimenez.app_android.fragment.GuarderiasFragment.OnListFragmentInteractionListener;
 import java.util.List;
 
 public class GuarderiasAdapter extends RecyclerView.Adapter<GuarderiasAdapter.ViewHolder> {
-    private final List<DummyItem> mValues;
+    private final List<DummyContent.DummyItem> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public GuarderiasAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public GuarderiasAdapter(List<DummyContent.DummyItem> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -49,7 +50,7 @@ public class GuarderiasAdapter extends RecyclerView.Adapter<GuarderiasAdapter.Vi
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;
-        public DummyItem mItem;
+        public DummyContent.DummyItem mItem;
         public ViewHolder(View view) {
             super(view);
             mView = view;

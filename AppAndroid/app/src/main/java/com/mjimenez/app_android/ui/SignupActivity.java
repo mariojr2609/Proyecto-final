@@ -41,8 +41,11 @@ public class SignupActivity extends AppCompatActivity {
     }
 
     public void onRegisterSuccess(Call<LoginSignupResponse> call, Response<LoginSignupResponse> response) {
-        Util.setData(SignupActivity.this, response.body().getToken(), response.body().getUser().get_id(),
-                response.body().getUser().getEmail(),response.body().getUser().getName(),response.body().getUser().getPicture());
+        Util.setData(SignupActivity.this, response.body().getToken(),
+                response.body().getUser().getId(),
+                response.body().getUser().getEmail(),
+                response.body().getUser().getName(),
+                response.body().getUser().getPicture());
         startActivity(new Intent(SignupActivity.this, DashboardActivity.class));
     }
 
@@ -99,8 +102,7 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<LoginSignupResponse> call, Throwable t) {
                 Log.e("NetworkFail", t.getMessage());
-                Toast.makeText(SignupActivity.this, getString(R.string.Error), Toast.LENGTH_SHORT).show();
-            }
+                Toast.makeText(SignupActivity.this, "Error de conexión", Toast.LENGTH_LONG).show();            }
         });
     }
 }

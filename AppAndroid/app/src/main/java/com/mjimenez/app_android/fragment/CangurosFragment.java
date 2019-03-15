@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.mjimenez.app_android.R;
 import com.mjimenez.app_android.adapter.CangurosAdapter;
 import com.mjimenez.app_android.dummy.DummyContent;

@@ -4,8 +4,8 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="color1">@color/colorBlack</item>
-        <item name="color2">@color/colorWhite</item>
+        <item name="colorError">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorWhite</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>

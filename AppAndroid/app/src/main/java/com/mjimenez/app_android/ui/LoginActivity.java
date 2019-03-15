@@ -16,11 +16,12 @@ import com.mjimenez.app_android.R;
 import com.mjimenez.app_android.responses.LoginSignupResponse;
 import com.mjimenez.app_android.retrofit.generator.ServiceGenerator;
 import com.mjimenez.app_android.retrofit.services.LoginSignupService;
+import com.mjimenez.app_android.util.Util;
+
 import okhttp3.Credentials;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import com.mjimenez.app_android.util.Util;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText email, password;
@@ -30,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         email = findViewById(R.id.loginEmail);
         password = findViewById(R.id.loginPassword);
         btnLogin = findViewById(R.id.loginBtn);
@@ -45,8 +46,11 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginSuccess(Call<LoginSignupResponse> call, Response<LoginSignupResponse> response) {
-        Util.setData(LoginActivity.this, response.body().getToken(), response.body().getUser().get_id(),
-                response.body().getUser().getEmail(),response.body().getUser().getName(),response.body().getUser().getPicture());
+        Util.setData(LoginActivity.this, response.body().getToken(),
+                response.body().getUser().getId(),
+                response.body().getUser().getEmail(),
+                response.body().getUser().getName(),
+                response.body().getUser().getPicture());
         startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
         finish();
     }

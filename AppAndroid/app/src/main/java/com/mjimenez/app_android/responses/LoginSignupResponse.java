@@ -2,6 +2,8 @@ package com.mjimenez.app_android.responses;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.mjimenez.app_android.models.User;
+import com.mjimenez.app_android.responses.UserResponse;
 
 public class LoginSignupResponse {
     @SerializedName("token")
@@ -9,12 +11,12 @@ public class LoginSignupResponse {
     private String token;
     @SerializedName("user")
     @Expose
-    private UserResponse user;
+    private User user;
 
     public LoginSignupResponse() {
     }
 
-    public LoginSignupResponse(String token, UserResponse user) {
+    public LoginSignupResponse(String token, User user) {
         this.token = token;
         this.user = user;
     }
@@ -27,11 +29,11 @@ public class LoginSignupResponse {
         this.token = token;
     }
 
-    public UserResponse getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(UserResponse user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
