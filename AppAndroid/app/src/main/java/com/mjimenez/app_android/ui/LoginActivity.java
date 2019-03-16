@@ -17,7 +17,6 @@ import com.mjimenez.app_android.responses.LoginSignupResponse;
 import com.mjimenez.app_android.retrofit.generator.ServiceGenerator;
 import com.mjimenez.app_android.retrofit.services.LoginSignupService;
 import com.mjimenez.app_android.util.Util;
-
 import okhttp3.Credentials;
 import retrofit2.Call;
 import retrofit2.Callback;
