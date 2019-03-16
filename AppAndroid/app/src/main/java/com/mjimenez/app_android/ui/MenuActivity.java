@@ -59,7 +59,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
+        if (id == R.id.nav_cerrarsesion) {
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -69,15 +69,12 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.nav_perfil) {
+        if (id == R.id.nav_child) {
         }
         else if (id == R.id.nav_guarderia) {
 
         }
         else if (id == R.id.nav_canguro) {
-
-        }
-        else if (id == R.id.nav_user) {
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
