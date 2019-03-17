@@ -7,9 +7,7 @@
           <input matInput placeholder=Name [formControl]="canguroForm.controls['name']">
         </mat-form-field>
 
-        <mat-form-field>
-          <input matInput placeholder=Photo [formControl]="canguroForm.controls['photo']">
-        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="openUploadDialog()">Photo</button>
 
         <mat-form-field>
           <input matInput placeholder=Phone type="number" [formControl]="canguroForm.controls['phone']">

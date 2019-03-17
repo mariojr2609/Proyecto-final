@@ -9,6 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutes } from './dashboard.routing';
 import { LoginService } from '../services/login.service';
+import { UploadService } from '../services/upload.service';
 
 import { GuarderiasService } from '../services/guarderia.service';
 import { ListarGuarderiasComponent } from './listar-guarderias/listar-guarderias.component';
@@ -18,6 +19,7 @@ import { DeleteGuarderiaComponent } from '../dialogs/delete-guarderia/delete-gua
 
 import { CangurosService } from '../services/canguro.service';
 import { ListarCangurosComponent } from './listar-canguros/listar-canguros.component';
+import { AddPhotoComponent } from '../dialogs/add-photo/add-photo.component';
 import { AddCanguroComponent } from '../dialogs/add-canguro/add-canguro.component';
 import { EditCanguroComponent } from '../dialogs/edit-canguro/edit-canguro.component';
 import { DeleteCanguroComponent } from '../dialogs/delete-canguro/delete-canguro.component';
@@ -34,6 +36,7 @@ import { DeleteUserComponent } from '../dialogs/delete-user/delete-user.componen
 
     ListarGuarderiasComponent,
     AddGuarderiaComponent,
+    AddPhotoComponent,
     EditGuarderiaComponent,
     DeleteGuarderiaComponent,
 
@@ -72,6 +75,7 @@ import { DeleteUserComponent } from '../dialogs/delete-user/delete-user.componen
     EditGuarderiaComponent,
     DeleteGuarderiaComponent,
     AddCanguroComponent,
+    AddPhotoComponent,
     EditCanguroComponent,
     DeleteCanguroComponent,
     EditUserComponent,
@@ -83,6 +87,7 @@ import { DeleteUserComponent } from '../dialogs/delete-user/delete-user.componen
     GuarderiasService,
     CangurosService,
     UserService,
+    UploadService,
     {
       provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}
     },
