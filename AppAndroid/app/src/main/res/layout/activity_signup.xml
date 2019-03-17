@@ -140,6 +140,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/signupRepitpassword"
         app:layout_constraintEnd_toStartOf="@+id/signupRepitpassword"
         app:layout_constraintTop_toTopOf="@+id/signupRepitpassword"
-        app:srcCompat="@drawable/ic_repeat_password" />
+        app:srcCompat="@drawable/ic_repeatpassword" />
 
 </android.support.constraint.ConstraintLayout>
