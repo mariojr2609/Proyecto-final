@@ -16,7 +16,11 @@ export class SigninComponent implements OnInit {
 
   public form: FormGroup;
 
-  constructor(private loginService: LoginService, private fb: FormBuilder, private router: Router) {}
+  constructor(
+    private loginService: LoginService, 
+    private fb: FormBuilder, 
+    private router: Router
+  ) {}
 
   ngOnInit() {
     /*this.form = this.fb.group({
@@ -30,7 +34,7 @@ export class SigninComponent implements OnInit {
     this.loginService.login(loginDto).subscribe(loginResp => {
       console.log(loginResp);
       this.loginService.setLoginData(loginResp);
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['/listar-usuarios']);
     }, 
     error => {
       console.log('Error en petición de login');

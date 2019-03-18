@@ -6,7 +6,7 @@ import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.compo
 
 export const DashboardRoutes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: AdminLayoutComponent,
     children: 
     [
