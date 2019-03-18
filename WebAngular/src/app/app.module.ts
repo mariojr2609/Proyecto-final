@@ -70,6 +70,16 @@ import {
     AccordionAnchorDirective,
     AccordionLinkDirective,
     AccordionDirective,
+    MenuComponent,
+    HeaderComponent,
+    SidebarComponent,
+    NotificationComponent,
+    OptionsComponent,
+    AdminLayoutComponent,
+    AuthLayoutComponent,
+    AccordionAnchorDirective,
+    AccordionLinkDirective,
+    AccordionDirective,
   ],
   
   imports: [
