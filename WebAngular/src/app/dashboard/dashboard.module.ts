@@ -26,6 +26,7 @@ import { DeleteCanguroComponent } from '../dialogs/delete-canguro/delete-canguro
 
 import { UserService } from '../services/user.service';
 import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.component';
+import { AddUserComponent } from '../dialogs/add-user/add-user.component';
 import { EditUserComponent } from '../dialogs/edit-user/edit-user.component';
 import { DeleteUserComponent } from '../dialogs/delete-user/delete-user.component';
 
@@ -46,6 +47,7 @@ import { DeleteUserComponent } from '../dialogs/delete-user/delete-user.componen
     DeleteCanguroComponent,
 
     ListarUsuariosComponent,
+    AddUserComponent,
     EditUserComponent,
     DeleteUserComponent
   ],
@@ -78,6 +80,7 @@ import { DeleteUserComponent } from '../dialogs/delete-user/delete-user.componen
     AddPhotoComponent,
     EditCanguroComponent,
     DeleteCanguroComponent,
+    AddUserComponent,
     EditUserComponent,
     DeleteUserComponent
   ],

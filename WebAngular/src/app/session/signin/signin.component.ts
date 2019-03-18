@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CustomValidators } from 'ng2-validation';
 import { LoginService } from 'src/app/services/login.service';
 import { LoginDto } from 'src/app/dto/login.dto';
 

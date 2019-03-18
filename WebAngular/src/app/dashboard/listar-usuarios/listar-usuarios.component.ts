@@ -6,6 +6,7 @@ import { MatSnackBar, MatDialog } from '@angular/material';
 import { Router } from '@angular/router';
 import { DeleteUserComponent } from 'src/app/dialogs/delete-user/delete-user.component';
 import { EditUserComponent } from 'src/app/dialogs/edit-user/edit-user.component';
+import { AddUserComponent } from 'src/app/dialogs/add-user/add-user.component';
 
 @Component({
   selector: 'app-listar-usuarios',
@@ -42,6 +43,10 @@ export class ListarUsuariosComponent implements OnInit {
         verticalPosition: 'top'
       });
     });
+  }
+
+  openDialogoAnadirUser() {
+    const addGuarderiascomponent = this.dialog.open(AddUserComponent);
   }
 
   openDialogoEditarUser(users: Users){

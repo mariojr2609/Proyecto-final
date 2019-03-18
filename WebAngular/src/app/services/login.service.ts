@@ -14,7 +14,10 @@ const masterkey = `${environment.masterkey}`;
 })
 export class LoginService {
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(
+    private http: HttpClient, 
+    private router: Router
+  ) { }
 
   login(loginDto: LoginDto): Observable<LoginResponse> {
     const requestOptions = {

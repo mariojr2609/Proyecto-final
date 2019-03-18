@@ -56,7 +56,6 @@ import {
   AccordionLinkDirective,
   AccordionDirective,
 } from './core';
-import { AddPhotoComponent } from './dialogs/add-photo/add-photo.component';
 
 @NgModule({
   declarations: [
