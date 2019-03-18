@@ -32,4 +32,6 @@
     <string name="studies">Studies:</string>
     <string name="action_settings">cerrar sesion</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_guarderia_maps">Map</string>
+    <string name="title_activity_canguro_maps">Map</string>
 </resources>

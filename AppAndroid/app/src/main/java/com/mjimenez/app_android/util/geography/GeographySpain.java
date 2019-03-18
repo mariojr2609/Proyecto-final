@@ -8,7 +8,7 @@ import java.util.HashMap;
 import com.mjimenez.app_android.R;
 
 public class GeographySpain {
-    private static HashMap<String, String[]> regionesProvincias;
+    /*private static HashMap<String, String[]> regionesProvincias;
     private static HashMap <String, String[]> provinciasMunicipios;
     private static HashMap <String, String> municipiosProvincia;
     private static HashMap <String, String> provinciasRegion;
@@ -296,6 +296,5 @@ public class GeographySpain {
         );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         return adapter;
-    }
-
+    }*/
 }

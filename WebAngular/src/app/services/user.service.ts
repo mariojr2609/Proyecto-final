@@ -23,7 +23,7 @@ export class UserService {
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.get<Users[]>(`${authUrl}/user/all`, requestOptions);
+    return this.http.get<Users[]>(`${authUrl}/users`, requestOptions);
   }
 
   addUsers(users:Users): Observable<Users>{
@@ -33,7 +33,7 @@ export class UserService {
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.post<Users>(`${authUrl}/user/create`, users, requestOptions);
+    return this.http.post<Users>(`${authUrl}/users`, users, requestOptions);
   }
 
   editUsers(id:string, editUsers:FormGroup): Observable<Users> {
@@ -43,7 +43,7 @@ export class UserService {
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.put<Users>(`${authUrl}/user/${id}`, editUsers, requestOptions);
+    return this.http.put<Users>(`${authUrl}/user/:id${id}`, editUsers, requestOptions);
   }
 
   updateUsers(users:Users): Observable<Users> {
@@ -65,7 +65,7 @@ export class UserService {
         'Access-Control-Allow-Origin': '*'
       })
     };
-    return this.http.delete(`${authUrl}/user/${id}`, requestOptions);
+    return this.http.delete(`${authUrl}/user/:id${id}`, requestOptions);
   }
 }
 

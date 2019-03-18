@@ -25,7 +25,7 @@ export class CangurosService {
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.get<Canguros[]>(`${authUrl}/canguros/all`, requestOptions);
+    return this.http.get<Canguros[]>(`${authUrl}/canguros`, requestOptions);
   }
 
   addCanguros(canguros:Canguros): Observable<Canguros>{
@@ -35,7 +35,7 @@ export class CangurosService {
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.post<Canguros>(`${authUrl}/canguros/create`, canguros, requestOptions);
+    return this.http.post<Canguros>(`${authUrl}/canguros`, canguros, requestOptions);
   }
 
   editCanguros(id:string, editCanguros:CangurosDto): Observable<Canguros>{
@@ -45,7 +45,7 @@ export class CangurosService {
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.put<Canguros>(`${authUrl}/guarderia/edit/${id}`, editCanguros, requestOptions);
+    return this.http.put<Canguros>(`${authUrl}/canguros/:id${id}`, editCanguros, requestOptions);
   }
 
   updateCanguros(canguros:Canguros): Observable<Canguros>{
@@ -66,6 +66,6 @@ export class CangurosService {
         'Access-Control-Allow-Origin': '*'
       })
     };
-    return this.http.delete(`${authUrl}/canguros/${id}`, requestOptions);
+    return this.http.delete(`${authUrl}/canguros/:id${id}`, requestOptions);
   }
 }

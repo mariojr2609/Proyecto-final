@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { AdminLayoutComponent } from '../core';
+import { AdminLayoutComponent } from '../core/admin-layout/admin-layout.component';
 import { ListarGuarderiasComponent } from './listar-guarderias/listar-guarderias.component';
 import { ListarCangurosComponent } from './listar-canguros/listar-canguros.component';
 import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.component';
 
 export const DashboardRoutes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: AdminLayoutComponent,
     children: 
     [

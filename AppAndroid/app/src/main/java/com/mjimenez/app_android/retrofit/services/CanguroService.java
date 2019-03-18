@@ -20,7 +20,8 @@ public interface CanguroService {
     Call<ContainerResponse<Canguro>> listCangurosAuth(@QueryMap Map<String, String> options);
 
     @GET(BASE_URL)
-    Call<ContainerResponse<Canguro>> listGeo(@Query("near") String near);
+    Call<ContainerResponse<Canguro>> getNearProps(@Query("near") String near, @Query("limit") int limit);
+
 
     @GET(BASE_URL + "/{id}")
     Call<ContainerOneRowResponse<Canguro>>getOne(@Path("id") String id);

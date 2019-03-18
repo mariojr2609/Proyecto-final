@@ -25,7 +25,7 @@ export class GuarderiasService {
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.get<Guarderias[]>(`${authUrl}/guarderia/all`, requestOptions);
+    return this.http.get<Guarderias[]>(`${authUrl}/guarderias`, requestOptions);
   }
 
   addGuarderias(guarderias:Guarderias): Observable<Guarderias>{
@@ -35,7 +35,7 @@ export class GuarderiasService {
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.post<Guarderias>(`${authUrl}/guarderia/create`, guarderias, requestOptions);
+    return this.http.post<Guarderias>(`${authUrl}/guarderias`, guarderias, requestOptions);
   }
 
   editGuarderias(id:string, editarGuarderia:GuarderiasDto): Observable<Guarderias>{
@@ -45,7 +45,7 @@ export class GuarderiasService {
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.put<Guarderias>(`${authUrl}/guarderia/edit/${id}`, editarGuarderia, requestOptions);
+    return this.http.put<Guarderias>(`${authUrl}/guarderia/:id/${id}`, editarGuarderia, requestOptions);
   }
 
   updateGuarderias(guarderias:Guarderias): Observable<Guarderias>{
@@ -66,6 +66,6 @@ export class GuarderiasService {
         'Access-Control-Allow-Origin': '*'
       })
     };
-    return this.http.delete(`${authUrl}/guarderias/${id}`, requestOptions);
+    return this.http.delete(`${authUrl}/guarderias/:id${id}`, requestOptions);
   }
 }

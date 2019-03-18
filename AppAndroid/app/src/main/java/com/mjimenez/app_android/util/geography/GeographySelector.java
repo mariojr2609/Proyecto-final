@@ -21,7 +21,8 @@ import com.mjimenez.app_android.R;
 import com.mjimenez.app_android.util.geography.GeographySpain;
 
 @SuppressLint("ValidFragment")
-public class GeographySelector extends DialogFragment implements OnItemSelectedListener, OnClickListener {
+public class GeographySelector  {
+    /*extends DialogFragment implements OnItemSelectedListener, OnClickListener
     private static GeographySpain geography;
     private GeographyListener gListener;
     private Activity mActivity;
@@ -144,6 +145,6 @@ public class GeographySelector extends DialogFragment implements OnItemSelectedL
             this.gListener.onGeographySelected(map);
             this.dismiss();
         }
-    }
+    }*/
 }
 
