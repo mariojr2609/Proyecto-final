@@ -14,10 +14,10 @@ public interface GuarderiaService {
     final String BASE_URL = "/guarderia";
 
     @GET(BASE_URL)
-    Call<ContainerResponse<Guarderia>> listCanguros(@QueryMap Map<String, String> options);
+    Call<ContainerResponse<Guarderia>> listGuarderias(@QueryMap Map<String, String> options);
 
     @GET(BASE_URL +"/auth")
-    Call<ContainerResponse<Guarderia>> listCangurosAuth(@QueryMap Map<String, String> options);
+    Call<ContainerResponse<Guarderia>> listGuarderiasAuth(@QueryMap Map<String, String> options);
 
     @GET(BASE_URL)
     Call<ContainerResponse<Guarderia>> getNearProps(@Query("near") String near, @Query("limit") int limit);

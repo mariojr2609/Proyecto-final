@@ -7,7 +7,7 @@
     <string name="ok">OK</string>
     <string name="hello_blank_fragment">AppKids</string>
 
-    <!--login y sidnup-->
+    <!--login y signup-->
     <string name="login_error">Error</string>
     <string name="error">Error</string>
     <string name="register_contraseña_no_segura">Contraseña no segura</string>
@@ -21,7 +21,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="cerrarsesion">Cerrar sesion</string>
 
-    <!--atributos guarderias y canguros-->
+    <!--atributos guarderias, canguros y child-->
     <string name="name">Name:</string>
     <string name="photo">Photo:</string>
     <string name="phone">Phone:</string>
@@ -30,6 +30,7 @@
     <string name="age">Age:</string>
     <string name="description">Description:</string>
     <string name="studies">Studies:</string>
+    <string name="fecha_nacimiento">dd/mm/yy:</string>
     <string name="action_settings">cerrar sesion</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_guarderia_maps">Map</string>

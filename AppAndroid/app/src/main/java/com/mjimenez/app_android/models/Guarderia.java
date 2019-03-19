@@ -1,9 +1,11 @@
 package com.mjimenez.app_android.models;
 
+import java.util.List;
+
 public class Guarderia {
     private String id;
     private String name;
-    private String photo;
+    private List<String> photo;
     private String phone;
     private String address;
     private String city;
@@ -14,10 +16,9 @@ public class Guarderia {
 
     }
 
-    public Guarderia(String id, String name, String photo, String phone, String address, String city, String description, String loc) {
+    public Guarderia(String id, String name, String phone, String address, String city, String description, String loc) {
         this.id = id;
         this.name = name;
-        this.photo = photo;
         this.phone = phone;
         this.address = address;
         this.city = city;
@@ -41,11 +42,11 @@ public class Guarderia {
         this.name = name;
     }
 
-    public String getPhoto() {
+    public List<String> getPhoto() {
         return photo;
     }
 
-    public void setPhoto(String photo) {
+    public void setPhoto(List<String> photo) {
         this.photo = photo;
     }
 

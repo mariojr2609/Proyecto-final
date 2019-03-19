@@ -31,10 +31,10 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".CanguroMapsActivity"
+            android:name=".util.geography.CanguroMapsActivity"
             android:label="@string/title_activity_canguro_maps"></activity>
         <activity
-            android:name=".GuarderiaMapsActivity"
+            android:name=".util.geography.GuarderiaMapsActivity"
             android:label="@string/title_activity_guarderia_maps" />
         <activity
             android:name=".ui.LoginActivity"

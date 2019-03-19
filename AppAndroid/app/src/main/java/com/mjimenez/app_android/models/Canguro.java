@@ -1,9 +1,11 @@
 package com.mjimenez.app_android.models;
 
+import java.util.List;
+
 public class Canguro {
     private String id;
     private String name;
-    private String photo;
+    private List<String> photo;
     private String phone;
     private String age;
     private String address;
@@ -15,10 +17,9 @@ public class Canguro {
 
     }
 
-    public Canguro(String id, String name, String photo, String phone, String age, String address, String city, String studies, String loc) {
+    public Canguro(String id, String name, String phone, String age, String address, String city, String studies, String loc) {
         this.id = id;
         this.name = name;
-        this.photo = photo;
         this.phone = phone;
         this.age = age;
         this.address = address;
@@ -43,11 +44,11 @@ public class Canguro {
         this.name = name;
     }
 
-    public String getPhoto() {
+    public List<String> getPhoto() {
         return photo;
     }
 
-    public void setPhoto(String photo) {
+    public void setPhoto(List<String> photo) {
         this.photo = photo;
     }
 

@@ -1,4 +1,4 @@
-package com.mjimenez.app_android;
+package com.mjimenez.app_android.util.geography;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.mjimenez.app_android.R;
 import com.mjimenez.app_android.models.Guarderia;
 import com.mjimenez.app_android.responses.ContainerResponse;
 import com.mjimenez.app_android.retrofit.generator.ServiceGenerator;
