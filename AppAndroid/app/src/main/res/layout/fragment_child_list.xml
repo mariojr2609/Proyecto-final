@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
         app:layoutManager="LinearLayoutManager"
-        tools:context=".fragment.ChildFragment"
+        tools:context=".fragment_list.ChildFragment"
         tools:listitem="@layout/fragment_child" />
 
 </android.support.v4.widget.SwipeRefreshLayout>

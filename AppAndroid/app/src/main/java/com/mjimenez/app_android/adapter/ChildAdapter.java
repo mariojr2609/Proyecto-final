@@ -34,20 +34,20 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
         holder.name.setText(holder.mItem.getName());
-        holder.fecha_nacPersona.setText(holder.mItem.getFecha_nacimiento());
+        holder.fecha_nacimiento.setText(holder.mItem.getFecha_nacimiento());
         holder.BtnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mListener.onDeleteBtnClick(holder.mItem.getId(), holder.mItem.getName());
             }
         });
-        holder.BtnEditar.setOnClickListener(new View.OnClickListener() {
+        holder.BtnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mListener.onEditPersonaClick(holder.mItem);
             }
         });
-        holder.infoPersona.setOnClickListener(new View.OnClickListener() {
+        holder.CardViewChild.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mListener.onClickPersona(holder.mItem);
@@ -63,27 +63,23 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
     public final View mView;
-    public final TextView name;
-    public final TextView fecha_nacPersona;
     public Child mItem;
-    public final Button BtnDelete;
-    public final CardView infoPersona;
-    public final Button BtnEditar;
-    //public final CardView elementoPersona;
+    public final TextView name, fecha_nacimiento;
+    public final Button BtnDelete, BtnEdit;
+    public final CardView CardViewChild;
     public ViewHolder(View view) {
         super(view);
         mView = view;
-        nombrePersona = view.findViewById(R.id.nombreMedicamento);
-        fechaNacPersona = view.findViewById(R.id.diaSemana);
-        btnDelete = view.findViewById(R.id.btnDeletePersona);
-        infoPersona = view.findViewById(R.id.cardViewPersonas);
-        btnEditar = view.findViewById(R.id.btnEditPersona);
-        //elementoPersona = view.findViewById(R.id.cardView);
+        name = view.findViewById(R.id.child_list_name);
+        fecha_nacimiento = view.findViewById(R.id.child_list_fechanacimiento);
+        BtnDelete = view.findViewById(R.id.child_list_btndelete);
+        BtnEdit = view.findViewById(R.id.child_list_btnedit);
+        CardViewChild = view.findViewById(R.id.child_cardview);
     }
 
     @Override
     public String toString() {
-        return super.toString() + " '" + nombrePersona.getText() + "'";
+        return super.toString() + " '" + name.getText() + "'";
     }
     }
 }

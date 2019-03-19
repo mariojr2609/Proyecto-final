@@ -1,4 +1,4 @@
-package com.mjimenez.app_android.fragment;
+package com.mjimenez.app_android.fragment_list;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,7 +13,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import com.mjimenez.app_android.R;
 import com.mjimenez.app_android.adapter.ChildAdapter;
 import com.mjimenez.app_android.interfaces.ChildListener;

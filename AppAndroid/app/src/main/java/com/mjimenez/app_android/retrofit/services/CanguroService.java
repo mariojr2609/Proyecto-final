@@ -16,7 +16,7 @@ public interface CanguroService {
     @GET(BASE_URL)
     Call<ContainerResponse<Canguro>> listCanguros(@QueryMap Map<String, String> options);
 
-    @GET(BASE_URL+"/auth")
+    @GET(BASE_URL + "/auth")
     Call<ContainerResponse<Canguro>> listCangurosAuth(@QueryMap Map<String, String> options);
 
     @GET(BASE_URL)

@@ -1,4 +1,4 @@
-package com.mjimenez.app_android.fragment;
+package com.mjimenez.app_android.fragment_list;
 
 import android.content.Context;
 import android.os.Bundle;

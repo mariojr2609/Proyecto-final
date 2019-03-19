@@ -21,6 +21,12 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="cerrarsesion">Cerrar sesion</string>
 
+    <!--acciones-->
+    <string name="edit">Editar</string>
+    <string name="delete">Eliminar</string>
+    <string name="add">Añadir</string>
+    <string name="cancel">Cancelar</string>
+
     <!--atributos guarderias, canguros y child-->
     <string name="name">Name:</string>
     <string name="photo">Photo:</string>

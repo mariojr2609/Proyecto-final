@@ -25,7 +25,7 @@
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
         app:layoutManager="LinearLayoutManager"
-        tools:context=".fragment.GuarderiaFragment"
+        tools:context=".fragment_list.GuarderiaFragment"
         tools:listitem="@layout/fragment_guarderia" >
 
     </android.support.v7.widget.RecyclerView>

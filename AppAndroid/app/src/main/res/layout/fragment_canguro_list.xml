@@ -25,7 +25,7 @@
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
         app:layoutManager="LinearLayoutManager"
-        tools:context=".fragment.CanguroFragment"
+        tools:context=".fragment_list.CanguroFragment"
         tools:listitem="@layout/fragment_canguro" >
 
     </android.support.v7.widget.RecyclerView>
