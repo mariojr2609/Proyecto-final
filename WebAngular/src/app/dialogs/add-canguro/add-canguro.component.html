@@ -7,8 +7,6 @@
           <input matInput placeholder=Name [formControl]="canguroForm.controls['name']">
         </mat-form-field>
 
-        <button mat-raised-button color="primary" (click)="openUploadDialog()">Photo</button>
-
         <mat-form-field>
           <input matInput placeholder=Phone type="number" [formControl]="canguroForm.controls['phone']">
         </mat-form-field>
@@ -28,7 +26,7 @@
         <mat-form-field>
           <input matInput placeholder=Studies [formControl]="canguroForm.controls['studies']">
         </mat-form-field>
-
+        
         <mat-form-field>
           <input matInput placeholder=Location [formControl]="canguroForm.controls['location']">
         </mat-form-field>
@@ -37,6 +35,7 @@
 
     <mat-dialog-actions>
       <button mat-button mat-dialog-close>CANCEL</button>
+      <button mat-raised-button >CONVERSOR</button>
       <button mat-raised-button color="primary" [mat-dialog-close]="true" [disabled]="!canguroForm.valid"(click)="addCanguro()">ADD</button>
     </mat-dialog-actions>
   </div>

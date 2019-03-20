@@ -75,9 +75,11 @@ public class SignupActivity extends AppCompatActivity {
                 String compassword = repit_passwordSignup.getText().toString().trim();
                 if(password.length() < 6){
                     onRegisterFail(R.string.register_contraseña_no_segura);
-                } else if(!password.equals(compassword)){
+                }
+                else if(!password.equals(compassword)){
                     onRegisterFail(R.string.register_contraseña_incorrecta);
-                } else {
+                }
+                else {
                     Register datosRegistro = new Register(name, email, password);
                     createUser(datosRegistro, progressDialog);
                 }

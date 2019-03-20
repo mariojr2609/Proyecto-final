@@ -8,10 +8,6 @@
         </mat-form-field>
 
         <mat-form-field>
-          <input matInput placeholder=Photo [formControl]="guarderiaForm.controls['photo']">
-        </mat-form-field>
-
-        <mat-form-field>
           <input matInput placeholder=Phone type="number" [formControl]="guarderiaForm.controls['phone']">
         </mat-form-field>
 
@@ -24,7 +20,7 @@
         </mat-form-field>
 
         <mat-form-field>
-          <input matInput placeholder=Descripción [formControl]="guarderiaForm.controls['description']">
+          <input matInput placeholder=Descripction [formControl]="guarderiaForm.controls['description']">
         </mat-form-field>
 
         <mat-form-field>
@@ -35,6 +31,7 @@
 
     <mat-dialog-actions>
       <button mat-button mat-dialog-close>CANCEL</button>
+      <button mat-raised-button >CONVERSOR</button>
       <button mat-raised-button color="primary" [mat-dialog-close]="true" [disabled]="!guarderiaForm.valid"(click)="addGuarderia()">ADD</button>
     </mat-dialog-actions>
   </div>

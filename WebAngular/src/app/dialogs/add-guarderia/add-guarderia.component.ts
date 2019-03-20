@@ -22,7 +22,6 @@ export class AddGuarderiaComponent implements OnInit {
   ngOnInit() {
     this.guarderiaForm = this.fb.group({
       name: ['', Validators.compose([Validators.required])],
-      photo: ['', Validators.compose([Validators.required])],
       phone: ['', Validators.compose([Validators.required])],
       address: ['', Validators.compose([Validators.required])],
       city: ['', Validators.compose([Validators.required])],

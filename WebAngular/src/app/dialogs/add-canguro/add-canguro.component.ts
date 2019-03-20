@@ -22,7 +22,6 @@ export class AddCanguroComponent implements OnInit {
   ngOnInit() {
     this.canguroForm = this.fb.group({
       name: ['', Validators.compose([Validators.required])],
-      photo: ['', Validators.compose([Validators.required])],
       phone: ['', Validators.compose([Validators.required])],
       age: ['', Validators.compose([Validators.required])],
       address: ['', Validators.compose([Validators.required])],
