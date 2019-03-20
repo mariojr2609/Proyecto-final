@@ -38,19 +38,19 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
         holder.BtnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListener.onDeleteBtnClick(holder.mItem.getId(), holder.mItem.getName());
+                mListener.OnDeleteChildClick(holder.mItem.getId(), holder.mItem.getName());
             }
         });
         holder.BtnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListener.onEditPersonaClick(holder.mItem);
+                mListener.OnEditChildClick(holder.mItem);
             }
         });
         holder.CardViewChild.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListener.onClickPersona(holder.mItem);
+                mListener.OnClickChild(holder.mItem);
             }
 
         });

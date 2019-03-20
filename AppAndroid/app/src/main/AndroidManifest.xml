@@ -12,6 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.GuarderiaDetailActivity"
+            android:label="@string/title_activity_guarderia_detail"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ui.CanguroDetailActivity"
+            android:label="@string/title_activity_canguro__detail_"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -19,7 +27,7 @@
 
         <activity
             android:name=".util.geography.CanguroMapsActivity"
-            android:label="@string/title_activity_canguro_maps"></activity>
+            android:label="@string/title_activity_canguro_maps" />
         <activity
             android:name=".util.geography.GuarderiaMapsActivity"
             android:label="@string/title_activity_guarderia_maps" />
@@ -28,6 +36,7 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -40,8 +49,5 @@
             android:name=".ui.DashboardActivity"
             android:label="@string/title_activity_dashboard"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.CangurosDetailActivity" />
-        <activity android:name=".ui.GuarderiasDetailActivity" />
     </application>
-
 </manifest>

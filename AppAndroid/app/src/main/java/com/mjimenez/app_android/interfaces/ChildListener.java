@@ -3,11 +3,11 @@ package com.mjimenez.app_android.interfaces;
 import com.mjimenez.app_android.models.Child;
 
 public interface ChildListener {
-    public void onAddPersonaClick(Child c);
+    //public void onAddChildClick(Child c);
 
-    public void onDeleteBtnClick(String id, String name);
+    public void OnClickChild(Child c);
 
-    public void onEditPersonaClick(Child c);
+    public void OnDeleteChildClick(String id, String name);
 
-    public void onClickPersona(Child c);
+    public void OnEditChildClick(Child c);
 }
