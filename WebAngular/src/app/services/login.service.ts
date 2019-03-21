@@ -27,7 +27,7 @@ export class LoginService {
         'Access-Control-Allow-Origin': '*'
       })
     };
-    return this.http.post<LoginResponse>(`${authUrl}/auth?access_token=${masterkey}`, null, requestOptions);
+    return this.http.post<LoginResponse>(`${authUrl}auth?access_token=${masterkey}`, null, requestOptions);
   }
 
   setLoginData(loginResponse: LoginResponse) {

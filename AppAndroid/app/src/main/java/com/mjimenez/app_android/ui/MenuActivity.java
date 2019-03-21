@@ -34,13 +34,12 @@ import com.mjimenez.app_android.util.Util;
 import com.mjimenez.app_android.util.geography.CanguroMapsActivity;
 
 public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, ChildListener, CanguroListener, GuarderiaListener {
+    private Fragment fragment;
     private Toolbar toolbar;
     private DrawerLayout drawer;
     private NavigationView navigation_view;
     private ImageView user_picture;
     private TextView user_name, user_email;
-    private Fragment fragment;
-    private String id_category, ciudad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,7 +116,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
         if (id == R.id.nav_child) {
             fragment = new ChildFragment();
-            toolbar.setTitle("Child");
+            toolbar.setTitle("Children");
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment, "ChildFragment").commit();
         }
         else if (id == R.id.nav_guarderia) {
@@ -163,30 +162,30 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void OnClickChild(Child child) {
-        Intent details = new Intent(MenuActivity.this, Child.class);
-        details.putExtra("CANGURO_ID", child.getId());
-        details.putExtra("CANGURO_NAME", child.getName());
-        details.putExtra("CANGURO_FECHANACIMIENTO", child.getFecha_nacimiento());
-        //details.putExtra("PROPERTY_CREATEDAT", property.getCreatedAt());
+        Intent details = new Intent(MenuActivity.this, ChildFragment.class);
+        details.putExtra("CHILD_ID", child.getId());
+        details.putExtra("CHILD_NAME", child.getName());
+        details.putExtra("CHILD_FECHANACIMIENTO", child.getFecha_nacimiento());
+        //details.putExtra("CHILD_CREATEDAT", property.getCreatedAt());
         startActivity(details);
     }
 
     @Override
     public void OnEditChildClick(Child child) {
         Intent details = new Intent(MenuActivity.this, ChildEditFragment.class);
-        details.putExtra("CANGURO_ID", child.getId());
-        details.putExtra("CANGURO_NAME", child.getName());
-        details.putExtra("CANGURO_FECHANACIMIENTO", child.getFecha_nacimiento());
-        //details.putExtra("PROPERTY_CREATEDAT", property.getCreatedAt());
+        details.putExtra("CHILD_ID", child.getId());
+        details.putExtra("CHILD_NAME", child.getName());
+        details.putExtra("CHILD_FECHANACIMIENTO", child.getFecha_nacimiento());
+        //details.putExtra("CHILD_CREATEDAT", property.getCreatedAt());
         startActivity(details);
     }
 
     @Override
     public void OnDeleteChildClick(String id, String name) {
         Intent details = new Intent(MenuActivity.this, ChildDeleteFragment.class);
-        //details.putExtra("CANGURO_ID", child.getId());
-        //details.putExtra("CANGURO_NAME", child.getName());
-        //details.putExtra("PROPERTY_CREATEDAT", property.getCreatedAt());
+        //details.putExtra("CHILD_ID", child.getId());
+        //details.putExtra("CHILD_NAME", child.getName());
+        //details.putExtra("CHILD_CREATEDAT", property.getCreatedAt());
         startActivity(details);
     }
 
@@ -200,7 +199,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         details.putExtra("GUARDERIA_CITY", guarderia.getCity());
         details.putExtra("GUARDERIA_DESCRIPTION", guarderia.getDescription());
         details.putExtra("GUARDERIA_LOC", guarderia.getLoc());
-        //details.putExtra("PROPERTY_CREATEDAT", property.getCreatedAt());
+        //details.putExtra("GUARDERIA_CREATEDAT", property.getCreatedAt());
         startActivity(details);
     }
 
@@ -215,12 +214,11 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         details.putExtra("CANGURO_CITY", canguro.getCity());
         details.putExtra("CANGURO_STUDIES", canguro.getStudies());
         details.putExtra("CANGURO_LOC", canguro.getLoc());
-        //details.putExtra("PROPERTY_CREATEDAT", property.getCreatedAt());
+        //details.putExtra("CANGURO_CREATEDAT", property.getCreatedAt());
         startActivity(details);
     }
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
-
     }
 }
