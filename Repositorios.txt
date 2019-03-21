@@ -1,2 +1,4 @@
 Todo: https://github.com/mariojr2609/Proyecto-final
 Api sola: https://dashboard.heroku.com/apps/api-proyecto-final
+git clone de la api: https://git.heroku.com/api-proyecto-final.git
+
