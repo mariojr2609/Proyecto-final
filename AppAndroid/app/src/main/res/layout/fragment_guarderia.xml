@@ -27,16 +27,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_appkids" />
 
-        <ImageView
-            android:id="@+id/guarderia_list_loc"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guarderia_list_address"
-            app:srcCompat="@drawable/ic_ubication" />
-
         <EditText
             android:id="@+id/guarderia_list_name"
             android:layout_width="0dp"
