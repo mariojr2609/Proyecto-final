@@ -16,7 +16,7 @@ import { AddUserComponent } from 'src/app/dialogs/add-user/add-user.component';
 export class ListarUsuariosComponent implements OnInit {
 
   displayedColumns: string[] = ['Id', 'Email', 'Name', 'Role', 'Opciones'];
-  dataSource: Users[];
+  dataSource: Users;
   //users: Users[];
 
   constructor (private userService: UserService, 

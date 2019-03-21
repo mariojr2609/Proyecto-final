@@ -16,7 +16,7 @@ import { DeleteGuarderiaComponent } from 'src/app/dialogs/delete-guarderia/delet
 export class ListarGuarderiasComponent implements OnInit {
 
   displayedColumns: string[] = ['Id', 'Name', 'Photo', 'Phone', 'Address', 'City', 'Description', 'Location', 'Opciones'];
-  dataSource: Guarderias[];
+  dataSource: Guarderias;
   users: Users[];
 
   constructor (

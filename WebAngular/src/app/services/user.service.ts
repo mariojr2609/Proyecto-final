@@ -5,6 +5,7 @@ import { LoginService } from './login.service';
 import { Observable } from 'rxjs';
 import { Users } from '../responses/user.response';
 import { FormGroup } from '@angular/forms';
+import { UserDto } from '../dto/user.dto';
 
 const authUrl = `${environment.apiUrl}`;
 
@@ -13,27 +14,29 @@ const authUrl = `${environment.apiUrl}`;
 })
 export class UserService {
 
-  constructor(private http: HttpClient,
-    private loginService: LoginService) { }
+  constructor(
+    private http: HttpClient,
+    private loginService: LoginService
+  ) { }
 
-  getUsers(): Observable<Users[]>{
+  getUsers(): Observable<Users>{
     const requestOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.get<Users[]>(`${authUrl}/users`, requestOptions);
+    return this.http.get<Users>(`${authUrl}/users`, requestOptions);
   }
 
-  addUsers(users:Users): Observable<Users>{
+  addUsers(userdto:UserDto): Observable<Users>{
     const requestOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.post<Users>(`${authUrl}/users`, users, requestOptions);
+    return this.http.post<Users>(`${authUrl}/users`, userdto, requestOptions);
   }
 
   editUsers(id:string, editUsers:FormGroup): Observable<Users> {
@@ -43,7 +46,7 @@ export class UserService {
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.put<Users>(`${authUrl}/user/:id${id}`, editUsers, requestOptions);
+    return this.http.put<Users>(`${authUrl}/user/:id/${id}`, editUsers, requestOptions);
   }
 
   updateUsers(users:Users): Observable<Users> {
@@ -57,7 +60,7 @@ export class UserService {
     return this.http.put<Users>(`${authUrl}`,users , requestOptions);
   }
 
-  deleteUsers(id:string){
+  deleteUsers(id:string): Observable<Users>{
     const requestOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -65,7 +68,7 @@ export class UserService {
         'Access-Control-Allow-Origin': '*'
       })
     };
-    return this.http.delete(`${authUrl}/user/:id${id}`, requestOptions);
+    return this.http.delete<Users>(`${authUrl}/user/:id/${id}`, requestOptions);
   }
 }
 

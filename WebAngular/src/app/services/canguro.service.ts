@@ -13,29 +13,30 @@ const authUrl = `${environment.apiUrl}`;
 })
 
 export class CangurosService {
+  
   constructor(
     private http: HttpClient, 
     private loginService: LoginService,
   ) { }
 
-  getCanguros(): Observable<Canguros[]>{
+  getCanguros(): Observable<Canguros>{
     const requestOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.get<Canguros[]>(`${authUrl}/canguros`, requestOptions);
+    return this.http.get<Canguros>(`${authUrl}/canguros`, requestOptions);
   }
 
-  addCanguros(canguros:Canguros): Observable<Canguros>{
+  addCanguros(cangurodto:CangurosDto): Observable<Canguros>{
     const requestOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.post<Canguros>(`${authUrl}/canguros`, canguros, requestOptions);
+    return this.http.post<Canguros>(`${authUrl}/canguros`, cangurodto, requestOptions);
   }
 
   editCanguros(id:string, editCanguros:CangurosDto): Observable<Canguros>{
@@ -45,7 +46,7 @@ export class CangurosService {
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.put<Canguros>(`${authUrl}/canguros/:id${id}`, editCanguros, requestOptions);
+    return this.http.put<Canguros>(`${authUrl}/canguros/:id/${id}`, editCanguros, requestOptions);
   }
 
   updateCanguros(canguros:Canguros): Observable<Canguros>{
@@ -58,7 +59,7 @@ export class CangurosService {
     return this.http.put<Canguros>(`${authUrl}`, canguros, requestOptions);
   }
 
-  deleteCanguros(id:string){
+  deleteCanguros(id:string): Observable<Canguros>{
     const requestOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -66,6 +67,6 @@ export class CangurosService {
         'Access-Control-Allow-Origin': '*'
       })
     };
-    return this.http.delete(`${authUrl}/canguros/:id${id}`, requestOptions);
+    return this.http.delete<Canguros>(`${authUrl}/canguros/:id/${id}`, requestOptions);
   }
 }

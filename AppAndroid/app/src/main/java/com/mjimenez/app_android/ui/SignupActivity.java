@@ -46,7 +46,7 @@ public class SignupActivity extends AppCompatActivity {
                 response.body().getUser().getEmail(),
                 response.body().getUser().getName(),
                 response.body().getUser().getPicture());
-        startActivity(new Intent(SignupActivity.this, DashboardActivity.class));
+        startActivity(new Intent(SignupActivity.this, MenuActivity.class));
     }
 
     public void onRegisterFail(int tipoError) {

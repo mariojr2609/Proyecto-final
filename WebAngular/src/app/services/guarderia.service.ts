@@ -18,14 +18,14 @@ export class GuarderiasService {
     private loginService: LoginService,
   ) { }
 
-  getGuarderias(): Observable<Guarderias[]>{
+  getGuarderias(): Observable<Guarderias>{
     const requestOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${this.loginService.getToken()}`
       })
     };
-    return this.http.get<Guarderias[]>(`${authUrl}/guarderias`, requestOptions);
+    return this.http.get<Guarderias>(`${authUrl}/guarderias`, requestOptions);
   }
 
   addGuarderias(guarderias:Guarderias): Observable<Guarderias>{
@@ -58,7 +58,7 @@ export class GuarderiasService {
     return this.http.put<Guarderias>(`${authUrl}`, guarderias, requestOptions);
   }
 
-  deleteGuarderias(id:string){
+  deleteGuarderias(id:string): Observable<Guarderias>{
     const requestOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -66,6 +66,6 @@ export class GuarderiasService {
         'Access-Control-Allow-Origin': '*'
       })
     };
-    return this.http.delete(`${authUrl}/guarderias/:id${id}`, requestOptions);
+    return this.http.delete<Guarderias>(`${authUrl}/guarderias/:id/${id}`, requestOptions);
   }
 }

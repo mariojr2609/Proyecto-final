@@ -16,7 +16,7 @@ import { DeleteCanguroComponent } from 'src/app/dialogs/delete-canguro/delete-ca
 export class ListarCangurosComponent implements OnInit {
 
   displayedColumns: string[] = ['Id', 'Name', 'Photo', 'Phone', 'Age', 'Address', 'City', 'Studies', 'Location', 'Opciones'];
-  dataSource: Canguros[];
+  dataSource: Canguros;
   usuarios: Users[];
 
   constructor (

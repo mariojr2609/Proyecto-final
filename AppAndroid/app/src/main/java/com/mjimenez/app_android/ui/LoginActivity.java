@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                 response.body().getUser().getEmail(),
                 response.body().getUser().getName(),
                 response.body().getUser().getPicture());
-        startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
+        startActivity(new Intent(LoginActivity.this, MenuActivity.class));
         finish();
     }
 
